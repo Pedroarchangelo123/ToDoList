@@ -16,16 +16,28 @@ import com.todo.list.services.TarefaService;
 
 
 @RestController
+<<<<<<< HEAD
 @RequestMapping("tarefa")
 public class TarefaController {
 	 @Autowired
 	 TarefaService tarefaService;
 	 @PostMapping
+=======
+@RequestMapping("tarefa") // Define o caminho base para os endpoints desse controller
+public class TarefaController {
+	 @Autowired
+	 TarefaService tarefaService;
+	 @PostMapping // Define um endpoint HTTP POST para criar uma nova tarefa
+>>>>>>> db3f86d (AGORA COM COMENTARIO AEEEE)
 	 public ResponseEntity<TarefaDTO> criarTarefa(@RequestBody TarefaDTO dto){
 		 dto = tarefaService.salvarTarefa(dto);
 		 return ResponseEntity.ok(dto);
 	 }
+<<<<<<< HEAD
 	 @GetMapping
+=======
+	 @GetMapping// Define um endpoint HTTP GET para listar todas as tarefas
+>>>>>>> db3f86d (AGORA COM COMENTARIO AEEEE)
 	 public ResponseEntity<List<Tarefas>> listarTarefas(){
 		 
 		 return ResponseEntity.ok(tarefaService.listarTarefas());

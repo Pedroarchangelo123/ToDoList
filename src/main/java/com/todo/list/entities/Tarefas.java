@@ -30,7 +30,11 @@ public class Tarefas {
 	private Status status;
 
 	@ManyToOne
+<<<<<<< HEAD
 	@JoinColumn(name = "usuario_id")
+=======
+	@JoinColumn(name = "usuario_id") 
+>>>>>>> db3f86d (AGORA COM COMENTARIO AEEEE)
 	private Usuario usuario;
 	public Tarefas() {
 	}

@@ -20,9 +20,15 @@ public class Usuario {
  //Essa anotacao faz com que o campo email seja unico por usuario
  @Column(unique = true)
  private String email;
+<<<<<<< HEAD
  //Cria a relaçao um para muitos e o mappedby conecta o campo usuario que foi criado na tabela tarefas
  @OneToMany( mappedBy = "usuario")
  private List<Tarefas> tarefas;
+=======
+ //Cria a relaçao um para muitos 
+ @OneToMany( mappedBy = "usuario")//mappedby:explica que o mapeamento é feito pela variavel "usuario" na entidade tarefas
+ private List<Tarefas> tarefas;//Armazena as tarefas atribuidas ao usuario
+>>>>>>> db3f86d (AGORA COM COMENTARIO AEEEE)
 
 public Usuario() {
 	this.id = id;
